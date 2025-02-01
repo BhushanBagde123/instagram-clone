@@ -13,7 +13,7 @@ const StoryNav = () => {
      }
 
   return (
-    <div  className='h-24 w-[70%]  bg-pink-800 flex'>
+    <div  className='h-24 w-full  bg-pink-800 flex'>
         <button onClick={nextButton} className='z-10'>next</button>
     <div ref={silderDiv} className='h-24 w-full  bg-pink-800 gap-3 flex overflow-x-auto items-center scroll-smooth p-2 overflow-y-hidden scrollWidth  '>
        
