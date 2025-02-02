@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdHomeFilled } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
 import { MdOutlineExplore } from "react-icons/md";
@@ -8,10 +8,18 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { MdOutlineAddBox } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { NavLink } from 'react-router-dom'; 
+import { SecNav } from './SecNav';
+
 
 const Nav = () => {
+  const [nav,setNav]=useState(false);
+
+  const searchSwitch =()=>{
+    setNav(!nav);
+  }
   return (
-    <div className='h-screen w-60 border-r-[1px] p-5 z-20 sticky top-0 left-0 bg-black'>
+    <>
+    <div className={`h-screen w-60 border-r-[1px] p-5 z-20 sticky top-0 left-0 bg-black ${nav?"hidden":"block"}`}>
       <div className='w-full px-4 text-xl font-bold capitalize'>
         <h1>instagram</h1>
       </div>
@@ -21,7 +29,7 @@ const Nav = () => {
             <MdHomeFilled size={32} /> home
           </NavLink>
 
-          <li className='flex gap-3 items-center hover:bg-gray-700 p-1 rounded-sm'>
+          <li className='flex gap-3 items-center cursor-pointer hover:bg-gray-700 p-1 rounded-sm' onClick={searchSwitch}>
             <FiSearch size={32} />search
           </li>
 
@@ -45,12 +53,16 @@ const Nav = () => {
             <MdOutlineAddBox size={32}/>create
           </li>
 
-          <li className='flex gap-3 items-center hover:bg-gray-700 p-1 rounded-sm'>
+          <NavLink to='/profile'><li className='flex gap-3 items-center hover:bg-gray-700 p-1 rounded-sm'>
             <CgProfile size={32}/>profile
           </li>
+          </NavLink>
         </ul>
       </div>
     </div>
+    <SecNav nav={nav} searchSwitch={searchSwitch}/>
+    
+    </>
   )
 }
 

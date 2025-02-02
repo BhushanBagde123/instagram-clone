@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './layouts/Layout'
 import Explor from './pages/Explor'
+import Profile from './pages/Profile'
 
 
 const route =createBrowserRouter([
@@ -15,6 +16,9 @@ const route =createBrowserRouter([
     },{
       path:'/explor',
       element:<Explor/>
+    },{
+      path:'/profile',
+      element:<Profile/>
     }]
   }
 ])
