@@ -10,11 +10,12 @@ const Layout = () => {
       <Nav />
 
       {/* Main Content */}
-      <div className=" min-h-screen p-3 ">
+      <div className=" w-full min-h-screen p-3 overflow-y-auto scrollWidth ">
         <ScrollRestoration />
         <Outlet />
-        <Footer />
+     
       </div>
+    
     </div>
   );
 };

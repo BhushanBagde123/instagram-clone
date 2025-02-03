@@ -41,9 +41,10 @@ const Nav = () => {
             <MdOutlineExplore size={34} />explore
           </NavLink>
 
-          <li className='flex gap-3 items-center hover:bg-gray-700 p-1 rounded-sm'>
+         <NavLink to='/reel'> <li className='flex gap-3 items-center hover:bg-gray-700 p-1 rounded-sm'>
             <TfiVideoClapper size={32} />reels
           </li>
+          </NavLink>
 
         <NavLink to='/inbox'>  <li className='flex gap-3 items-center hover:bg-gray-700 p-1 rounded-sm'>
             <FaTelegramPlane size={32} />messages

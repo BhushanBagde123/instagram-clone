@@ -4,10 +4,12 @@ import Content from '../components/Content'
 const Home = () => {
   return (
     <div className='w-full min-h-screen flex '>
-        <div className='w-[60%] h-[900px] flex flex-col  '>
+        <div className='w-[70%] h-[900px] flex flex-col  '>
         <StoryNav/>
-        <div className='w-full h-full flex flex-col items-center mt-4 p-3'>
+        <div className='w-full h-full flex flex-col items-center mt-4 p-3 gap-14'>
         <Content/>
+        <Content/>
+        
         </div>
        
         </div>

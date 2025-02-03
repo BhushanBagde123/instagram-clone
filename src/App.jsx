@@ -5,6 +5,7 @@ import Layout from './layouts/Layout'
 import Explor from './pages/Explor'
 import Profile from './pages/Profile'
 import InboxPage from './pages/InboxPage'
+import Reels from './pages/Reels'
 
 
 const route =createBrowserRouter([
@@ -23,6 +24,9 @@ const route =createBrowserRouter([
     },{
       path:'/inbox',
       element:<InboxPage/>
+    },{
+      path:'/reel',
+      element:<Reels/>
     }]
   }
 ])
