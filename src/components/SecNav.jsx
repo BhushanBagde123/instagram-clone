@@ -10,9 +10,9 @@ import { CgProfile } from "react-icons/cg";
 import { NavLink } from 'react-router-dom'
 import { FaSquareInstagram } from "react-icons/fa6";
 import Search from './Search';
-export const SecNav = ({nav,searchSwitch}) => {
+export const SecNav = ({nav,searchSwitch,sceNav,navSwitch}) => {
   return (
-    <div className={`h-screen w-60 flex flex-col gap-8 p-5 z-20 sticky top-0  left-0 bg-black ${nav?"block":"hidden"}`}>
+    <div className={`h-screen w-60 flex flex-col gap-8 pt-3 z-20 sticky top-0 border-r-1    left-0 bg-black ${nav ?"block":"hidden"}`}>
      {nav&& <Search/>}
     <div className='w-full px-4 text-xl font-bold capitalize'>
       <FaSquareInstagram size={32} />
@@ -38,9 +38,10 @@ export const SecNav = ({nav,searchSwitch}) => {
           <TfiVideoClapper size={32} />
         </li>
 
-        <li className='flex gap-3 items-center p-1 rounded-sm'>
-          <FaTelegramPlane size={32} />
+       <NavLink to='/inbox'> <li className='flex gap-3 items-center p-1 rounded-sm'>
+          <FaTelegramPlane size={32} onClick={navSwitch}/>
         </li>
+        </NavLink>
 
         <li className='flex gap-3 items-center p-1 rounded-sm'>
           <IoIosHeartEmpty size={32} />

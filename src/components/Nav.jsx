@@ -13,13 +13,17 @@ import { SecNav } from './SecNav';
 
 const Nav = () => {
   const [nav,setNav]=useState(false);
+  const [secNav,setSecNav]=useState(false)
 
   const searchSwitch =()=>{
     setNav(!nav);
   }
+  const navSwitch =()=>{
+    setSecNav(!secNav);
+  }
   return (
     <>
-    <div className={`h-screen w-60 border-r-[1px] p-5 z-20 sticky top-0 left-0 bg-black ${nav?"hidden":"block"}`}>
+    <div className={`h-screen w-60 border-r-[1px] border-gray-700 pt-5 flex flex-col gap-6 z-20 sticky top-0 left-0 bg-black ${nav?"hidden":"block"}`}>
       <div className='w-full px-4 text-xl font-bold capitalize'>
         <h1>instagram</h1>
       </div>
@@ -41,9 +45,10 @@ const Nav = () => {
             <TfiVideoClapper size={32} />reels
           </li>
 
-          <li className='flex gap-3 items-center hover:bg-gray-700 p-1 rounded-sm'>
+        <NavLink to='/inbox'>  <li className='flex gap-3 items-center hover:bg-gray-700 p-1 rounded-sm'>
             <FaTelegramPlane size={32} />messages
           </li>
+          </NavLink>
 
           <li className='flex gap-3 items-center hover:bg-gray-700 p-1 rounded-sm'>
             <IoIosHeartEmpty size={32} />notification
@@ -60,7 +65,7 @@ const Nav = () => {
         </ul>
       </div>
     </div>
-    <SecNav nav={nav} searchSwitch={searchSwitch}/>
+    <SecNav nav={nav} searchSwitch={searchSwitch} sceNav={secNav} navSwitch={navSwitch}/>
     
     </>
   )

@@ -4,3 +4,6 @@
     scrollbar-width: none;
     
 }
+.transform-container{
+    transition: transform 0.3s ease-in-out;
+}

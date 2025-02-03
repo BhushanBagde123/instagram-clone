@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './layouts/Layout'
 import Explor from './pages/Explor'
 import Profile from './pages/Profile'
+import InboxPage from './pages/InboxPage'
 
 
 const route =createBrowserRouter([
@@ -19,6 +20,9 @@ const route =createBrowserRouter([
     },{
       path:'/profile',
       element:<Profile/>
+    },{
+      path:'/inbox',
+      element:<InboxPage/>
     }]
   }
 ])
