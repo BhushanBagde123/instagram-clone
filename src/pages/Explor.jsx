@@ -2,7 +2,21 @@ import React from 'react'
 
 const Explor = () => {
   return (
-    <div >Explor</div>
+    <div className='w-full h-auto overflow-y-auto overflow-x-hidden'>
+      explore
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+    </div>
   )
 }
 

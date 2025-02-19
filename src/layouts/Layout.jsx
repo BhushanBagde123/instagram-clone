@@ -10,7 +10,7 @@ const Layout = () => {
       <Nav />
 
       {/* Main Content */}
-      <div className=" w-full min-h-screen p-3 overflow-y-auto scrollWidth ">
+      <div className=" w-full min-h-screen  overflow-y-auto scrollWidth ">
         <ScrollRestoration />
         <Outlet />
      
